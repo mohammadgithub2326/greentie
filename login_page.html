@@ -1,73 +1,127 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Login Page</title>
+  
+  <title>Green tie</title>
+  <link rel="stylesheet" href="login_page.css">
   <style>
     body {
+      
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-    }
+      background-image: url('gtlogo.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      height:100vh;
+
+
+
+    } 
+
+
 
     .container {
       max-width: 400px;
       margin: 0 auto;
-      padding: 20px;
-      background-color: #ffffff;
-      border: 1px solid #cccccc;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding:20px;
+      background-color: transparent;
+      border-radius: 10px;
+      height: 10vh;
     }
-
+    
     h2 {
       text-align: center;
+      margin-bottom: 20px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      
     }
-
-    input[type="text"],
-    input[type="password"] {
-      width: 100%;
-      padding: 12px 20px;
-      margin: 8px 0;
-      display: inline-block;
-      border: 1px solid #151111;
-      box-sizing: border-box;
-      border-radius: 4px;
+    
+    .form-group {
+      margin-bottom: 15px;
     }
-
-    button {
-      background-color: #4CAF50;
-      color: rgb(255, 255, 255);
-      padding: 14px 20px;
-      margin: 8px 0;
+    
+    .form-group label {
+      display: block;
+      font-weight: italic;
+      margin-bottom: 5px;
+    }
+    
+    .form-group input[type="text"],
+    .form-group input[type="password"] {
+      width: 90%;
+      padding: 8px;
+      border: 1px solid #29b13b;
+      border-bottom-left-radius: 0dvh;
+    }
+    
+    
+    .form-group button {
+      width: 90%;
+      padding: 8px;
+      background-color: transparent;
+      color: #090808;
       border: none;
+      border-radius: 3px;
       cursor: pointer;
-      width: 100%;
-      border-radius: 4px;
+      mask-border-outset: 10;
     }
-
-    button:hover {
+    .form-group1 button {
+      width: 45%;
+      padding: 8px;
+      background-color: transparent;
+      color: #090808;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      mask-border-outset: 10;
+    }
+    
+    .form-sign button::-webkit-file-upload-button {
+      width: 20%;
+      padding: 8px;
+      background-color: #2572b6;
+      color: #0a0909;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    
+    .form-group button:hover {
       background-color: #45a049;
+    }
+    
+    .form-group .error-message {
+      color: #41af4e;
+      font-size: 12px;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h2>Login</h2>
-    <form action="process-login.php" method="POST">
-      <label for="username">Username</label>
-      <input type="text" id="username" name="username" placeholder="Enter your username" required>
-
-      <label for="password">Password</label>
-      <input type="password" id="password" name="password" placeholder="Enter your password" required>
-
-      <button type="submit">Login</button>
+    <h2>log in</h2>
+    <form>
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" placeholder="Enter your username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+      </div>
+      <div class="form-group">
+        <button type="submit">Login</button>
+      </div>
+      <div class="form-group1">
+        <button type="text">Forgot password ?</button>
+      </div>
+      <div class="form-sign">
+        <label type="text">  Dont have an account ? </label>
+        <button type="signup">sign up</button>
+      </div>
+      </div>
     </form>
   </div>
 </body>
 </html>
-
-
-
-
 
 
 
